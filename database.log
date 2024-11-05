@@ -1,0 +1,11 @@
+1730817529014|2|statement|select u1_0.users_id,u1_0.email,u1_0.name,p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id left join users_projet p1_0 on u1_0.users_id=p1_0.users_id left join projet p1_1 on p1_1.projet_id=p1_0.projet_id
+1730817529042|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1730817529047|0|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=2
+1730817529049|0|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=3
+1730817529053|0|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+1730817928674|4|statement|insert into users (email,name) values ('lucas@mail.com','Eric')
+1730817928680|1|statement|insert into projet (description,name) values ('test','Project')
+1730817928683|1|statement|insert into task (projet_id,status,title,users_id) values (5,'En cours','The Title',NULL)
+1730817928684|0|statement|insert into task (projet_id,status,title,users_id) values (5,'En cours','The Title',NULL)
+1730817928695|0|statement|insert into users_projet (users_id,projet_id) values (5,5)
+1730817928697|1|commit|
